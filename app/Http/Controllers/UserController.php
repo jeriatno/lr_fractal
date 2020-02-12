@@ -26,18 +26,6 @@ class UserController extends Controller
         return fractal()
                 ->item($data)
                 ->transformWith(new UserTransformer)
-                ->includeProperties()
-                ->toArray();
-    }
-
-    public function profileUser(User $user, $id)
-    {
-        $data = $user->find($id);
-
-        return fractal()
-                ->item($data)
-                ->transformWith(new UserTransformer)
-                ->includeProperties()
                 ->toArray();
     }
 }

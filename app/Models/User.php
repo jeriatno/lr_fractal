@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Property;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -37,14 +36,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function properties()
-    {
-        return $this->hasMany(Property::class);
-    }
-
-    public function ownsProperty(Property $property)
-    {
-        return auth()->id() === $property->user->id;
-    }
 }
