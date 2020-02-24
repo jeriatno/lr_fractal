@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel Fractal &mdash; Jeblog</title>
+        <title>Laravel Fractal</title>
         <link href="{{ asset('favicon.png') }}" type="img/x-icon" rel="shortcut icon">
 
         <!-- Fonts -->
